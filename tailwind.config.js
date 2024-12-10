@@ -48,5 +48,10 @@ module.exports = {
       boxShadow: ["active", "hover"],
     },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'), 
+  ],
+  daisyui: {
+    darkTheme: "light",
+   },
 };

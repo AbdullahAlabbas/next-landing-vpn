@@ -1,49 +1,40 @@
 import React, { useState } from "react";
 
-// import react slick
 import Slider from "react-slick";
-import Image from "next/image";
-import Stars from "../public/assets/Icon/stars.svg";
 import ArrowBack from "../public/assets/Icon/eva_arrow-back-fill.svg";
 import ArrowNext from "../public/assets/Icon/eva_arrow-next-fill.svg";
 
 const Testimoni = ({
   listTestimoni = [
     {
-      name: "iezh Robert",
-      image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
-      rating: "4.5",
+      name: "رؤية 2030",
       testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+        "تعزيز الابتكار، خلق فرص عمل، زيادة الصادرات، تحقيق الاكتفاء الذاتي، وتقوية الاقتصاد السعودي بما يتماشى مع رؤية 2030. دعم الحلول المستدامة التي تساهم في تحقيق هذه الأهداف على المدى الطويل",
     },
     {
-      name: "iezh Robert",
-      image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
-      rating: "4.5",
+      name: "الصناعة والسلامة",
       testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+        "تعزيز معايير السلامة في القطاع الصناعي، دعم الابتكار في مجالات السلامة والصحة المهنية، وتطوير بيئة صناعية آمنة ومستدامة",
     },
     {
-      name: "iezh Robert",
-      image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
-      rating: "4.5",
+      name: "السعودية الخضراء",
       testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+        "تعزيز الوعي البيئي، دعم الابتكار في الحلول المستدامة، وتحقيق تنمية خضراء مستدامة تساهم في الحفاظ على البيئة وتقليل البصمة الكربونية",
     },
     {
-      name: "iezh Robert",
-      image: "/assets/people-3.png",
-      city: "Warsaw",
-      country: "Poland",
-      rating: "4.5",
+      name: "مجالات المستقبل",
       testimoni:
-        "Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best",
+        "يتجه الابتكار نحو عدة مجالات منها التقاط الكربون، حيث يتم توظيف تقنيات الذكاء الاصطناعي لتحسين الكفاءة وتعزيز الاستدامة، مما يسهم في تطوير البيئة الصناعية والحد من التأثيرات البيئية",
+    },
+    {
+      name: "اللغة العربية",
+      testimoni:
+        "تعزيز استخدام اللغة العربية في المجالات التقنية والابتكارية، ودعم الهوية الثقافية العربية من خلال حلول تقنية تعتمد على اللغة",
+    },
+    {
+      name: "روح الفريق",
+      testimoni:
+        "تعزيز روح الفريق من خلال التعاون وتبادل الأفكار، وتحقيق الأهداف المشتركة، وتنمية مهارات العمل الجماعي لتحقيق الابتكار والإبداع",
     },
   ],
 }) => {
@@ -56,7 +47,7 @@ const Testimoni = ({
         </a>
       );
     },
-    dotsClass: "slick-dots w-max absolute mt-20  ",
+    dotsClass: "slick-dots w-max absolute mt-20",
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -89,37 +80,25 @@ const Testimoni = ({
         ref={setSliderRef}
         className="flex items-stretch justify-items-stretch"
       >
-        {listTestimoni.map((listTestimonis, index) => (
-          <div className="px-3 flex items-stretch" key={index}>
-            <div className="border-2 border-gray-500 hover:border-orange-500 transition-all rounded-lg p-8 flex flex-col">
-              <div className="flex flex-col xl:flex-row w-full items-stretch xl:items-center">
-                <div className="flex order-2 xl:order-1">
-                  <Image
-                    src={listTestimonis.image}
-                    height={50}
-                    width={50}
-                    alt="Icon People"
-                  />
-                  <div className="flex flex-col ml-5 text-left">
-                    <p className="text-lg text-black-600 capitalize">
-                      {listTestimonis.name}
-                    </p>
-                    <p className="text-sm text-black-500 capitalize">
-                      {listTestimonis.city},{listTestimonis.country}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex flex-none items-center ml-auto order-1 xl:order-2">
-                  <p className="text-sm">{listTestimonis.rating}</p>
-                  <span className="flex ml-4">
-                    <Stars className="h-4 w-4" />
-                  </span>
-                </div>
-              </div>
-              <p className="mt-5 text-left">“{listTestimonis.testimoni}”.</p>
-            </div>
-          </div>
-        ))}
+{listTestimoni.map((listTestimonis, index) => (
+  <div className="px-3 flex items-stretch" key={index}>
+    <div
+      dir="rtl"
+      style={{ width: '350px', height: '250px' }} // Fixed width and height set here
+      className="border-2 border-gray-500 hover:border-orange-500 transition-all rounded-lg p-8 flex flex-col"
+    >
+      <div className="flex flex-col w-full">
+        <p className="text-[18px] text-black-600 text-right font-bold">
+          {listTestimonis.name}
+        </p>
+      </div>
+      <p className="mt-5 text-right text-[16px]">
+        “{listTestimonis.testimoni}”.
+      </p>
+    </div>
+  </div>
+))}
+
       </Slider>
       <div className="flex w-full items-center justify-end">
         <div className="flex flex-none justify-between w-auto mt-14">

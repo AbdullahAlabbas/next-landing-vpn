@@ -1,7 +1,6 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import Image from "next/image";
-import ButtonPrimary from "./misc/ButtonPrimary";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 
@@ -24,6 +23,42 @@ const Hero = ({
     },
   ],
 }) => {
+
+  // Example countdown logic
+  const calculateTimeLeft = () => {
+    const targetDate = new Date('December 31, 2024 23:59:59').getTime(); // Example target date
+    const now = new Date().getTime();
+    const difference = targetDate - now;
+
+    let timeLeft = {
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0,
+    };
+
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    }
+
+    return timeLeft;
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
 
   return (
@@ -32,32 +67,37 @@ const Hero = ({
       id="about"
     >
       <ScrollAnimationWrapper>
-          <motion.div
-            className="grid grid-flow-row sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 py-6 sm:py-16"
-            variants={scrollAnimation}>
-            <div className=" flex flex-col justify-center items-start row-start-2 sm:row-start-1">
-              <h1 className="text-3xl lg:text-4xl xl:text-5xl font-medium text-black-600 leading-normal">
-                Want anything to be easy with <strong>LaslesVPN</strong>.
-              </h1>
-              <p className="text-black-500 mt-4 mb-6">
-                Provide a network for all your needs with ease and fun using
-                LaslesVPN discover interesting features from us.
-              </p>
-              <ButtonPrimary>Get Started</ButtonPrimary>
-            </div>
-            <div className="flex w-full">
-              <motion.div className="h-full w-full" variants={scrollAnimation}>
-                <Image
-                  src="/assets/Illustration1.png"
-                  alt="VPN Illustrasi"
-                  quality={100}
-                  width={612}
-                  height={383}
-                  layout="responsive"
-                />
-              </motion.div>
-            </div>
-          </motion.div>
+        <motion.div
+          className="grid grid-flow-row sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 py-6 sm:py-16"
+          variants={scrollAnimation}>
+          <div className="flex flex-col justify-center items-start row-start-2 sm:row-start-1">
+            <h1 className="text-3xl lg:text-4xl xl:text-5xl font-medium text-black-600 leading-normal" dir="rtl">
+              <strong> صناعة ثون .INDUSTRIALTHON</strong>
+            </h1>
+            <p className="text-black-500 mt-4 mb-6" dir="rtl">
+              مسابقة تهدف إلى تعزيز التواصل بين المبدعين من جميع أنحاء المملكة وتطوير
+              قدراتهم التقنية لتلبية احتياجات الصناعة برعاية فخرية من شركة أرامكو
+              السعودية. تمثل "صناعة ثون" فرصة فريدة للمشاركين لتطوير مهاراتهم، تبادل
+              الأفكار والمعرفة، وعرض مشاريعهم أمام خبراء الصناعة، حيث أن المشاريع الفائزة
+              التي تُظهِر تأثيرًا إيجابيًا على عمليات أرامكو قد تحظى باهتمام شركة أرامكو
+              السعودية لتبنيها، مما يوفر فرصة تطبيقها العملي في العالم الحقيقي. في "صناعة
+              ثون" نهدف إلى بناء مجتمع متماسك من المبدعين السعوديين ودعم التكامل التقني
+              بين المناطق، مما يسهم في رفع سقفِ معايير الابتكارات الوطنية في بيئة مشجعة.
+            </p>
+          </div>
+          <div className="flex w-full">
+            <motion.div className="h-full w-full" variants={scrollAnimation}>
+              <Image
+                src="/assets/Illustration1.png"
+                alt="VPN Illustrasi"
+                quality={100}
+                width={612}
+                height={383}
+                layout="responsive"
+              />
+            </motion.div>
+          </div>
+        </motion.div>
       </ScrollAnimationWrapper>
       <div className="relative w-full flex">
         <ScrollAnimationWrapper
@@ -82,12 +122,47 @@ const Hero = ({
               </div>
             </motion.div>
           ))}
-       </ScrollAnimationWrapper>
-       <div
+        </ScrollAnimationWrapper>
+        <div
           className="absolute bg-black-600 opacity-5 w-11/12 roudned-lg h-64 sm:h-48 top-0 mt-8 mx-auto left-0 right-0"
           style={{ filter: "blur(114px)" }}
-       ></div>
+        ></div>
       </div>
+
+      {/* Centered countdown with a heading above it */}
+      <ScrollAnimationWrapper>
+        <motion.div variants={scrollAnimation} className="text-center mt-16">
+          <h2 className="text-2xl font-bold mb-4" dir="rtl">
+            بداية الهاكاثون
+          </h2>
+          <div className="grid grid-flow-col gap-5 text-center auto-cols-max justify-center">
+            <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+              <span className="countdown font-mono text-5xl">
+                {timeLeft.days}
+              </span>
+              days
+            </div>
+            <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+              <span className="countdown font-mono text-5xl">
+                {timeLeft.hours}
+              </span>
+              hours
+            </div>
+            <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+              <span className="countdown font-mono text-5xl">
+                {timeLeft.minutes}
+              </span>
+              min
+            </div>
+            <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+              <span className="countdown font-mono text-5xl">
+                {timeLeft.seconds}
+              </span>
+              sec
+            </div>
+          </div>
+        </motion.div>
+      </ScrollAnimationWrapper>
     </div>
   );
 };
