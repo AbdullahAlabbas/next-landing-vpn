@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import Masar from "./masar";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
+import AgendaComponent from './AgendaComponent'; 
+
 
 const Pricing = () => {
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
@@ -42,6 +44,9 @@ const Pricing = () => {
             </motion.div>
           </ScrollAnimationWrapper>
 
+          <AgendaComponent />
+
+
           <ScrollAnimationWrapper>
             <motion.div variants={scrollAnimation}>
               <div className="relative inline-block mb-6 mt-6 text-center">
@@ -61,6 +66,7 @@ const Pricing = () => {
               </div>
             </motion.div>
           </ScrollAnimationWrapper>
+          
 
           <ScrollAnimationWrapper className="relative w-full mt-2">
             <motion.div variants={scrollAnimation} custom={{ duration: 3 }}>
@@ -80,7 +86,7 @@ const Pricing = () => {
             </motion.div>
           </ScrollAnimationWrapper>
         </div>
-      </div>
+        </div>
     </div>
   );
 };
