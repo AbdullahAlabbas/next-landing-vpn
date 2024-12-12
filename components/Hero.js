@@ -3,7 +3,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
-import CountdownTimer from "./CountdownTimer";
 
 const Hero = () => {
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
@@ -13,7 +12,8 @@ const Hero = () => {
       <ScrollAnimationWrapper>
         <motion.div
           className="grid grid-flow-row sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 py-6 sm:py-16"
-          variants={scrollAnimation}>
+          variants={scrollAnimation}
+        >
           <div className="flex flex-col justify-center items-start row-start-2 sm:row-start-1">
             <h1 className="text-3xl lg:text-4xl xl:text-5xl font-medium text-black-600 leading-normal" dir="rtl">
               <strong>صناعة ثون INDUSTRIALTHON</strong>
@@ -90,37 +90,52 @@ const Hero = () => {
         </div>
       </div>
 
+      {/* Partners Section */}
       <div className="flex flex-col w-full my-16">
-          <ScrollAnimationWrapper>
-            <motion.div className="w-full flex justify-evenly items-center mt-4 flex-wrap lg:flex-nowrap" variants={scrollAnimation}>
-              <img
-                src="/assets/Icon/amazon.png"
-                className="h-14 w-auto mt-4 lg:mt-2"
-                alt=""
-              />
-              <img
-                src="/assets/Icon/netflix.png"
-                className="h-14 w-auto mt-2 lg:mt-0"
-                alt=""
-              />
-              <img
-                src="/assets/Icon/reddit.png"
-                className="h-12 w-auto mt-2 lg:mt-0"
-                alt=""
-              />
-              <img
-                src="/assets/Icon/discord.png"
-                className="h-14 w-auto mt-2 lg:mt-0"
-                alt=""
-              />
-              <img
-                src="/assets/Icon/spotify.png"
-                className="h-12 w-auto mt-2 lg:mt-0"
-                alt=""
-              />
-            </motion.div>
-          </ScrollAnimationWrapper>
-        </div>
+      <div className="mb-4 relative inline-block text-right" dir="rtl">
+  <h3 className="text-2xl font-bold relative z-10 inline-block">
+    شركـاء النجاح
+  </h3>
+  <div
+    className="absolute w-36 bg-orange-500 z-0" // Adjusted width to 'w-full' if full width is needed
+    style={{
+      height: '9px',
+      bottom: '0',
+      right: '0', // Changed from 'left' to 'right'
+    }}
+  ></div>
+</div>
+        
+        <ScrollAnimationWrapper>
+          <motion.div className="w-full flex justify-evenly items-center mt-4 flex-wrap lg:flex-nowrap" variants={scrollAnimation}>
+            <img
+              src="/assets/Icon/amazon.png"
+              className="h-14 w-auto mt-4 lg:mt-2"
+              alt="Amazon Logo"
+            />
+            <img
+              src="/assets/Icon/netflix.png"
+              className="h-14 w-auto mt-2 lg:mt-0"
+              alt="Netflix Logo"
+            />
+            <img
+              src="/assets/Icon/reddit.png"
+              className="h-12 w-auto mt-2 lg:mt-0"
+              alt="Reddit Logo"
+            />
+            <img
+              src="/assets/Icon/discord.png"
+              className="h-14 w-auto mt-2 lg:mt-0"
+              alt="Discord Logo"
+            />
+            <img
+              src="/assets/Icon/spotify.png"
+              className="h-12 w-auto mt-2 lg:mt-0"
+              alt="Spotify Logo"
+            />
+          </motion.div>
+        </ScrollAnimationWrapper>
+      </div>
     </div>
   );
 };
