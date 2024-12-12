@@ -93,7 +93,7 @@ const Testimoni = ({
         </p>
       </div>
       <p className="mt-5 text-right text-[16px]">
-        “{listTestimonis.testimoni}”.
+        {listTestimonis.testimoni}.
       </p>
     </div>
   </div>
