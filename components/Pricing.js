@@ -42,22 +42,25 @@ const Pricing = () => {
             </motion.div>
           </ScrollAnimationWrapper>
 
-
-          <div className="relative inline-block mb-6 mt-6 text-center">
-  <h4 className="text-xl sm:text-2xl lg:text-3xl font-medium text-black-600 relative z-10">
-    موقع الحفل
-  </h4>
-  <div
-    className="absolute bg-orange-500 z-0"
-    style={{
-      width: "150px",
-      height: "9px",
-      bottom: "0px",
-      left: "50%",
-      transform: "translateX(-50%)", 
-    }}
-  ></div>
-</div>
+          <ScrollAnimationWrapper>
+            <motion.div variants={scrollAnimation}>
+              <div className="relative inline-block mb-6 mt-6 text-center">
+                <h4 className="text-xl sm:text-2xl lg:text-3xl font-medium text-black-600 relative z-10">
+                  موقع الحفل
+                </h4>
+                <div
+                  className="absolute bg-orange-500 z-0"
+                  style={{
+                    width: "150px",
+                    height: "9px",
+                    bottom: "0px",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                  }}
+                ></div>
+              </div>
+            </motion.div>
+          </ScrollAnimationWrapper>
 
           <ScrollAnimationWrapper className="relative w-full mt-2">
             <motion.div variants={scrollAnimation} custom={{ duration: 3 }}>
