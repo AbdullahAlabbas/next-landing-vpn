@@ -30,7 +30,7 @@ const Timeline = () => {
           left: 0,
           width: '100%',
           height: '2px',
-          backgroundColor: '#3cb371', // Adjust the line color if needed
+          backgroundColor: '#F53855', // Adjust the line color if needed
           zIndex: 1
         }}
       />
@@ -41,9 +41,7 @@ const Timeline = () => {
           style={{
             position: 'absolute',
             top: '50%',
-            left: `calc(${(index / (numEvents - 1)) * 100}% - ${
-              index === numEvents - 1 ? '50px' : '0px'
-            })`,
+            left: `${(index / (numEvents - 1)) * 100}%`,
             transform: 'translate(-50%, -50%)',
             zIndex: 2
           }}
@@ -55,7 +53,7 @@ const Timeline = () => {
               borderRadius: '8px',
               boxShadow: '0 1px 5px rgba(0,0,0,0.2)',
               padding: '10px',
-              minWidth: '180px',
+              minWidth: event.id === 5 ? '230px' : '180px', // Larger width for the specified event
               textAlign: 'center'
             }}
           >
@@ -73,3 +71,6 @@ const Timeline = () => {
 };
 
 export default Timeline;
+
+
+

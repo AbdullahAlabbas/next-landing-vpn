@@ -46,21 +46,18 @@ const Pricing = () => {
           </ScrollAnimationWrapper>
         </div>
 
-        <Timeline />
-
-
 
 
         <ScrollAnimationWrapper>
           <motion.div variants={scrollAnimation}>
-            <div className="relative inline-block mb-6 mt-6 text-center">
+            <div className="relative inline-block mb-0 mt-6 text-center">
               <h4 className="text-xl sm:text-2xl lg:text-3xl font-medium text-black-600 relative z-10">
-                الأجندة
+                رحلة صناعة ثون
               </h4>
               <div
                 className="absolute bg-orange-500 z-0"
                 style={{
-                  width: "150px",
+                  width: "190px",
                   height: "9px",
                   bottom: "0px",
                   left: "50%",
@@ -70,6 +67,34 @@ const Pricing = () => {
             </div>
           </motion.div>
         </ScrollAnimationWrapper>
+
+
+
+        <Timeline />
+
+
+
+
+        <ScrollAnimationWrapper>
+          <motion.div variants={scrollAnimation}>
+            <div className="relative inline-block mb-0 mt-2 text-center">
+              <h4 className="text-xl sm:text-2xl lg:text-3xl font-medium text-black-600 relative z-10">
+                الأجندة
+              </h4>
+              <div
+                className="absolute bg-orange-500 z-0"
+                style={{
+                  width: "90px",
+                  height: "9px",
+                  bottom: "0px",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                }}
+              ></div>
+            </div>
+          </motion.div>
+        </ScrollAnimationWrapper>
+
 
         <AgendaComponent />
 
