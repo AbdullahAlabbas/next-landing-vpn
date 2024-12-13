@@ -7,6 +7,8 @@ import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 import AgendaComponent from './AgendaComponent';
 import Timeline from './Timeline';
+import Prizes from './Prizes'; 
+
 
 const Pricing = () => {
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
@@ -76,6 +78,7 @@ const Pricing = () => {
             </motion.div>
           </ScrollAnimationWrapper>
         </div>
+        <Prizes scrollAnimation={scrollAnimation} /> {/* Add Prizes Section */}
 
         <ScrollAnimationWrapper>
           <motion.div variants={scrollAnimation}>
@@ -168,7 +171,6 @@ const Pricing = () => {
             </div>
           </motion.div>
         </ScrollAnimationWrapper>
-
         <ScrollAnimationWrapper className="relative w-full mt-2">
           <motion.div variants={scrollAnimation} custom={{ duration: 3 }}>
             <div className="absolute rounded-xl py-8 sm:py-14 px-6 sm:px-12 lg:px-16 w-full flex flex-col sm:flex-row-reverse justify-between items-center z-10 bg-white-500">
