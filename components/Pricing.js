@@ -18,7 +18,13 @@ const Pricing = () => {
           <ScrollAnimationWrapper>
             <motion.h3
               variants={scrollAnimation}
-              className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed"
+              style={{
+                paddingTop: "20px",
+                position: "relative",
+                zIndex: 2,
+              }}
+              className="text-4xl font-bold"
+              dir="rtl"
             >
               مسارات المسابقة
             </motion.h3>
@@ -44,7 +50,13 @@ const Pricing = () => {
           <ScrollAnimationWrapper>
             <motion.h3
               variants={scrollAnimation}
-              className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-normal w-9/12 sm: lg:w-4/12 mx-auto"
+              style={{
+                paddingTop: "20px",
+                position: "relative",
+                zIndex: 2,
+              }}
+              className="text-4xl font-bold"
+              dir="rtl"
             >
               أهداف صناعة ثون
             </motion.h3>
@@ -69,7 +81,15 @@ const Pricing = () => {
         <ScrollAnimationWrapper>
           <motion.div variants={scrollAnimation}>
             <div className="relative inline-block mb-0 mt-6 text-center">
-              <h4 className="text-xl sm:text-2xl lg:text-3xl font-medium text-black-600 relative z-10">
+              <h4
+                style={{
+                  paddingTop: "20px",
+                  position: "relative",
+                  zIndex: 2,
+                }}
+                className="text-4xl font-bold"
+                dir="rtl"
+              >
                 رحلة صناعة ثون
               </h4>
               <div
@@ -88,14 +108,16 @@ const Pricing = () => {
 
         <ScrollAnimationWrapper>
           <motion.div variants={scrollAnimation}>
-            <Timeline />
-          </motion.div>
-        </ScrollAnimationWrapper>
-
-        <ScrollAnimationWrapper>
-          <motion.div variants={scrollAnimation}>
             <div className="relative inline-block mb-0 mt-2 text-center">
-              <h4 className="text-xl sm:text-2xl lg:text-3xl font-medium text-black-600 relative z-10">
+              <h4
+                style={{
+                  paddingTop: "20px",
+                  position: "relative",
+                  zIndex: 2,
+                }}
+                className="text-4xl font-bold"
+                dir="rtl"
+              >
                 الأجندة
               </h4>
               <div
@@ -117,7 +139,15 @@ const Pricing = () => {
         <ScrollAnimationWrapper>
           <motion.div variants={scrollAnimation}>
             <div className="relative inline-block mb-6 mt-6 text-center">
-              <h4 className="text-xl sm:text-2xl lg:text-3xl font-medium text-black-600 relative z-10">
+              <h4
+                style={{
+                  paddingTop: "20px",
+                  position: "relative",
+                  zIndex: 2,
+                }}
+                className="text-4xl font-bold"
+                dir="rtl"
+              >
                 موقع الحفل
               </h4>
               <div
@@ -138,7 +168,15 @@ const Pricing = () => {
           <motion.div variants={scrollAnimation} custom={{ duration: 3 }}>
             <div className="absolute rounded-xl py-8 sm:py-14 px-6 sm:px-12 lg:px-16 w-full flex flex-col sm:flex-row-reverse justify-between items-center z-10 bg-white-500">
               <div className="flex flex-col text-right w-10/12 sm:w-7/12 lg:w-5/12 mb-6 sm:mb-0">
-                <h5 className="text-black-600 text-xl sm:text-2xl lg:text-3xl leading-relaxed font-medium">
+                <h5
+                  style={{
+                    paddingTop: "20px",
+                    position: "relative",
+                    zIndex: 2,
+                  }}
+                  className="text-4xl font-bold"
+                  dir="rtl"
+                >
                   مركز الأمير سعود بن عبد الله بن ثنيان آل سعود
                 </h5>
                 <p>كلية الجبيل الصناعية, مدينة الجبيل</p>
