@@ -6,11 +6,13 @@ import ButtonOutline from "../misc/ButtonOutline.";
 const Header = () => {
   const [activeLink, setActiveLink] = useState(null);
   const [scrollActive, setScrollActive] = useState(false);
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setScrollActive(window.scrollY > 20);
     });
   }, []);
+
   return (
     <>
       <header
@@ -18,7 +20,7 @@ const Header = () => {
           "fixed top-0 w-full z-30 bg-white-500 transition-all " +
           (scrollActive ? " shadow-md pt-0" : " pt-4")
         }
-        dir="rtl" // Add this to switch to right-to-left direction
+        dir="rtl"
       >
         <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-3 sm:py-4">
           <div className="col-start-1 col-end-2 flex items-center">
@@ -31,9 +33,7 @@ const Header = () => {
               spy={true}
               smooth={true}
               duration={1000}
-              onSetActive={() => {
-                setActiveLink("about");
-              }}
+              onSetActive={() => setActiveLink("about")}
               className={
                 "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
                 (activeLink === "about"
@@ -41,17 +41,15 @@ const Header = () => {
                   : " text-black-500 hover:text-orange-500")
               }
             >
-الرئيسية     
-       </LinkScroll>
+              الرئيسية
+            </LinkScroll>
             <LinkScroll
               activeClass="active"
               to="feature"
               spy={true}
               smooth={true}
               duration={1000}
-              onSetActive={() => {
-                setActiveLink("feature");
-              }}
+              onSetActive={() => setActiveLink("feature")}
               className={
                 "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
                 (activeLink === "feature"
@@ -67,9 +65,7 @@ const Header = () => {
               spy={true}
               smooth={true}
               duration={1000}
-              onSetActive={() => {
-                setActiveLink("pricing");
-              }}
+              onSetActive={() => setActiveLink("pricing")}
               className={
                 "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
                 (activeLink === "pricing"
@@ -85,9 +81,7 @@ const Header = () => {
               spy={true}
               smooth={true}
               duration={1000}
-              onSetActive={() => {
-                setActiveLink("testimoni");
-              }}
+              onSetActive={() => setActiveLink("testimoni")}
               className={
                 "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
                 (activeLink === "testimoni"
@@ -99,17 +93,15 @@ const Header = () => {
             </LinkScroll>
           </ul>
           <div className="col-start-10 col-end-12 font-medium flex justify-end items-center">
-            {/* <Link href="/">
-              <a className="text-black-600 mx-2 sm:mx-4 capitalize tracking-wide hover:text-orange-500 transition-all">
-                تسجيل الدخول
-              </a>
-            </Link> */}
             <ButtonOutline> سجل الآن</ButtonOutline>
           </div>
         </nav>
       </header>
       {/* Mobile Navigation */}
-      <nav className="fixed lg:hidden bottom-0 left-0 right-0 z-20 px-4 sm:px-8 shadow-t" dir="rtl">
+      <nav
+        className="fixed lg:hidden bottom-0 left-0 right-0 z-20 px-4 sm:px-8 shadow-t"
+        dir="rtl"
+      >
         <div className="bg-white-500 sm:px-3">
           <ul className="flex w-full justify-between items-center text-black-500">
             <LinkScroll
@@ -118,9 +110,7 @@ const Header = () => {
               spy={true}
               smooth={true}
               duration={1000}
-              onSetActive={() => {
-                setActiveLink("about");
-              }}
+              onSetActive={() => setActiveLink("about")}
               className={
                 "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
                 (activeLink === "about"
@@ -135,23 +125,22 @@ const Header = () => {
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M3 9l9-7 9 7M4 10v10a1 1 0 001 1h3m10-11v10a1 1 0 01-1 1h-3m-7 0h6" 
                 />
               </svg>
-الرئيسية            </LinkScroll>
+              الرئيسية
+            </LinkScroll>
             <LinkScroll
               activeClass="active"
               to="feature"
               spy={true}
               smooth={true}
               duration={1000}
-              onSetActive={() => {
-                setActiveLink("feature");
-              }}
+              onSetActive={() => setActiveLink("feature")}
               className={
                 "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
                 (activeLink === "feature"
@@ -166,11 +155,11 @@ const Header = () => {
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M9 20l-5.447-2.724A2 2 0 013 15.276V5.5a2 2 0 011.553-1.947L9 1l6 3 5.447-2.724A2 2 0 0123 5.5v9.776a2 2 0 01-1.553 1.947L15 20l-6-3-5.447 2.724A2 2 0 013 15.276V5.5" 
                 />
               </svg>
               المسارات
@@ -181,9 +170,7 @@ const Header = () => {
               spy={true}
               smooth={true}
               duration={1000}
-              onSetActive={() => {
-                setActiveLink("pricing");
-              }}
+              onSetActive={() => setActiveLink("pricing")}
               className={
                 "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
                 (activeLink === "pricing"
@@ -198,11 +185,11 @@ const Header = () => {
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path
+                <path 
                   strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M3 4a1 1 0 011-1h3.178a2 2 0 001.697.957l5.788-.002a2 2 0 001.705 1.045H21a1 1 0 01.993.883L22 6v14a1 1 0 01-1 1H4a1 1 0 01-.993-.883L3 20V4z" 
                 />
               </svg>
               الأهداف
@@ -213,9 +200,7 @@ const Header = () => {
               spy={true}
               smooth={true}
               duration={1000}
-              onSetActive={() => {
-                setActiveLink("testimoni");
-              }}
+              onSetActive={() => setActiveLink("testimoni")}
               className={
                 "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
                 (activeLink === "testimoni"
@@ -230,11 +215,11 @@ const Header = () => {
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M8 21h8a1 1 0 001-1v-1a5.978 5.978 0 00-2.337-4.747A5.978 5.978 0 0012 13a5.978 5.978 0 00-2.337 1.253A5.978 5.978 0 007 19v1a1 1 0 001 1zm-4 0h1a2 2 0 002-2v-1a2 2 0 00-.164-.78A2 2 0 004 14.35V12a6 6 0 0112 0v2.35a2 2 0 00-.836 1.87v1a2 2 0 002 2h1M5 12a7 7 0 0114 0" 
                 />
               </svg>
               الجوائز
