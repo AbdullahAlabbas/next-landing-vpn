@@ -6,7 +6,7 @@ import Masar from "./masar";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 import AgendaComponent from './AgendaComponent';
-import Timeline from './Timeline';  // Import the Timeline component
+import Timeline from './Timeline';
 
 const Pricing = () => {
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
@@ -14,7 +14,6 @@ const Pricing = () => {
   return (
     <div className="bg-grey-100 w-full py-14" id="pricing">
       <div className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto flex flex-col w-full text-center justify-center">
-        
         <div className="flex flex-col w-full">
           <ScrollAnimationWrapper>
             <motion.h3
@@ -23,7 +22,8 @@ const Pricing = () => {
             >
               مسارات المسابقة
             </motion.h3>
-            <div
+            <motion.div
+              variants={scrollAnimation}
               className="bg-orange-500"
               style={{
                 height: "8px",
@@ -31,7 +31,7 @@ const Pricing = () => {
                 margin: "auto",
                 marginTop: "-10px"
               }}
-            ></div>
+            />
           </ScrollAnimationWrapper>
           <ScrollAnimationWrapper className="w-full flex flex-col py-12">
             <motion.div variants={scrollAnimation}>
@@ -39,6 +39,7 @@ const Pricing = () => {
             </motion.div>
           </ScrollAnimationWrapper>
         </div>
+
         <div className="flex flex-col w-full my-16" id="testimoni">
           <ScrollAnimationWrapper>
             <motion.h3
@@ -47,7 +48,8 @@ const Pricing = () => {
             >
               أهداف صناعة ثون
             </motion.h3>
-            <div
+            <motion.div
+              variants={scrollAnimation}
               className="bg-orange-500"
               style={{
                 height: "8px",
@@ -55,7 +57,7 @@ const Pricing = () => {
                 margin: "auto",
                 marginTop: "-10px"
               }}
-            ></div>
+            />
           </ScrollAnimationWrapper>
           <ScrollAnimationWrapper className="w-full flex flex-col py-12">
             <motion.div variants={scrollAnimation}>
@@ -79,7 +81,7 @@ const Pricing = () => {
                   left: "50%",
                   transform: "translateX(-50%)",
                 }}
-              ></div>
+              />
             </div>
           </motion.div>
         </ScrollAnimationWrapper>
@@ -105,7 +107,7 @@ const Pricing = () => {
                   left: "50%",
                   transform: "translateX(-50%)",
                 }}
-              ></div>
+              />
             </div>
           </motion.div>
         </ScrollAnimationWrapper>
@@ -127,7 +129,7 @@ const Pricing = () => {
                   left: "50%",
                   transform: "translateX(-50%)",
                 }}
-              ></div>
+              />
             </div>
           </motion.div>
         </ScrollAnimationWrapper>
@@ -146,7 +148,7 @@ const Pricing = () => {
             <div
               className="absolute bg-black-600 opacity-5 w-11/12 rounded-lg h-60 sm:h-56 top-0 mt-8 mx-auto left-0 right-0"
               style={{ filter: "blur(114px)" }}
-            ></div>
+            />
           </motion.div>
         </ScrollAnimationWrapper>
       </div>

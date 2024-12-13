@@ -16,7 +16,7 @@ const Timeline = () => {
       style={{
         position: 'relative',
         width: '100%',
-        height: '150px', // Adjust as needed for spacing around the line
+        height: '150px', 
         display: 'flex',
         alignItems: 'center',
         margin: '16px 0'
