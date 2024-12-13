@@ -7,7 +7,6 @@ import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 import AgendaComponent from './AgendaComponent'; 
 
-
 const Pricing = () => {
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
 
@@ -35,7 +34,7 @@ const Pricing = () => {
               variants={scrollAnimation}
               className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-normal w-9/12 sm: lg:w-4/12 mx-auto"
             >
-              أهداف صناعة ثون{" "}
+              أهداف صناعة ثون
             </motion.h3>
           </ScrollAnimationWrapper>
           <ScrollAnimationWrapper className="w-full flex flex-col py-12">
@@ -44,8 +43,27 @@ const Pricing = () => {
             </motion.div>
           </ScrollAnimationWrapper>
 
-          <AgendaComponent />
+          <ScrollAnimationWrapper>
+            <motion.div variants={scrollAnimation}>
+              <div className="relative inline-block mb-6 mt-6 text-center">
+                <h4 className="text-xl sm:text-2xl lg:text-3xl font-medium text-black-600 relative z-10">
+                  الأجندة
+                </h4>
+                <div
+                  className="absolute bg-orange-500 z-0"
+                  style={{
+                    width: "150px",
+                    height: "9px",
+                    bottom: "0px",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                  }}
+                ></div>
+              </div>
+            </motion.div>
+          </ScrollAnimationWrapper>
 
+          <AgendaComponent />
 
           <ScrollAnimationWrapper>
             <motion.div variants={scrollAnimation}>
@@ -66,7 +84,6 @@ const Pricing = () => {
               </div>
             </motion.div>
           </ScrollAnimationWrapper>
-          
 
           <ScrollAnimationWrapper className="relative w-full mt-2">
             <motion.div variants={scrollAnimation} custom={{ duration: 3 }}>
@@ -86,7 +103,7 @@ const Pricing = () => {
             </motion.div>
           </ScrollAnimationWrapper>
         </div>
-        </div>
+      </div>
     </div>
   );
 };
