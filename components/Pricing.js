@@ -65,7 +65,7 @@ const Pricing = () => {
               className="bg-orange-500"
               style={{
                 height: "8px",
-                width: "280px",
+                width: "268px",
                 margin: "auto",
                 marginTop: "-10px"
               }}
@@ -95,7 +95,7 @@ const Pricing = () => {
               <div
                 className="absolute bg-orange-500 z-0"
                 style={{
-                  width: "190px",
+                  width: "230px",
                   height: "9px",
                   bottom: "0px",
                   left: "50%",
@@ -103,6 +103,12 @@ const Pricing = () => {
                 }}
               />
             </div>
+          </motion.div>
+        </ScrollAnimationWrapper>
+
+        <ScrollAnimationWrapper>
+          <motion.div variants={scrollAnimation}>
+            <Timeline />
           </motion.div>
         </ScrollAnimationWrapper>
 
@@ -123,7 +129,7 @@ const Pricing = () => {
               <div
                 className="absolute bg-orange-500 z-0"
                 style={{
-                  width: "90px",
+                  width: "110px",
                   height: "9px",
                   bottom: "0px",
                   left: "50%",
@@ -153,7 +159,7 @@ const Pricing = () => {
               <div
                 className="absolute bg-orange-500 z-0"
                 style={{
-                  width: "150px",
+                  width: "185px",
                   height: "9px",
                   bottom: "0px",
                   left: "50%",
