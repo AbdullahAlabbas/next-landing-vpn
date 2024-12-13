@@ -41,7 +41,9 @@ const Timeline = () => {
           style={{
             position: 'absolute',
             top: '50%',
-            left: `${(index / (numEvents - 1)) * 100}%`,
+            left: `calc(${100 - (index / (numEvents - 1)) * 100}% - ${
+              index === 0 ? '50px' : '0px'
+            })`,
             transform: 'translate(-50%, -50%)',
             zIndex: 2
           }}
@@ -60,7 +62,7 @@ const Timeline = () => {
             <p style={{ margin: '0', fontWeight: 'bold', fontSize: '1rem' }}>
               {event.title}
             </p>
-            <p style={{ margin: '0', marginTop: '5px', fontSize: '0.9rem', color: '#333' }}>
+            <p style={{ margin: '0', marginTop: '5px', fontSize: '0.9rem', color: '#AFB5C0' }}>
               {event.date}
             </p>
           </div>
@@ -71,6 +73,3 @@ const Timeline = () => {
 };
 
 export default Timeline;
-
-
-

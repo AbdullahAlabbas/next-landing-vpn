@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-white-300 pt-36 pb-4">
+    <div className="bg-white-300 pt-44 pb-4">
       <div className="max-w-screen-xl w-full mx-auto px-6 sm:px-8 lg:px-16 grid grid-rows-6 sm:grid-rows-1 grid-flow-row sm:grid-flow-col grid-cols-3 sm:grid-cols-12 gap-4">
         <div className="row-span-2 sm:col-span-2 sm:col-start-1 sm:col-end-3 flex flex-col">
           <p className="text-black-600 mb-0 font-medium text-lg" style={{ direction: 'rtl' }}>المنتج</p>

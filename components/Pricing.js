@@ -23,6 +23,15 @@ const Pricing = () => {
             >
               مسارات المسابقة
             </motion.h3>
+            <div
+              className="bg-orange-500"
+              style={{
+                height: "8px",
+                width: "260px",
+                margin: "auto",
+                marginTop: "-10px"
+              }}
+            ></div>
           </ScrollAnimationWrapper>
           <ScrollAnimationWrapper className="w-full flex flex-col py-12">
             <motion.div variants={scrollAnimation}>
@@ -38,6 +47,15 @@ const Pricing = () => {
             >
               أهداف صناعة ثون
             </motion.h3>
+            <div
+              className="bg-orange-500"
+              style={{
+                height: "8px",
+                width: "280px",
+                margin: "auto",
+                marginTop: "-10px"
+              }}
+            ></div>
           </ScrollAnimationWrapper>
           <ScrollAnimationWrapper className="w-full flex flex-col py-12">
             <motion.div variants={scrollAnimation}>
@@ -45,8 +63,6 @@ const Pricing = () => {
             </motion.div>
           </ScrollAnimationWrapper>
         </div>
-
-
 
         <ScrollAnimationWrapper>
           <motion.div variants={scrollAnimation}>
@@ -68,12 +84,11 @@ const Pricing = () => {
           </motion.div>
         </ScrollAnimationWrapper>
 
-
-
-        <Timeline />
-
-
-
+        <ScrollAnimationWrapper>
+          <motion.div variants={scrollAnimation}>
+            <Timeline />
+          </motion.div>
+        </ScrollAnimationWrapper>
 
         <ScrollAnimationWrapper>
           <motion.div variants={scrollAnimation}>
@@ -94,7 +109,6 @@ const Pricing = () => {
             </div>
           </motion.div>
         </ScrollAnimationWrapper>
-
 
         <AgendaComponent />
 
