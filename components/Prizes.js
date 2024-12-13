@@ -12,7 +12,7 @@ const Prizes = ({ scrollAnimation }) => {
   ];
 
   return (
-    <div className="flex flex-col w-full my-16" id="prizes">
+    <div className="flex flex-col w-full my-0 bg-white" id="prizes">
       <ScrollAnimationWrapper>
         <motion.h3
           variants={scrollAnimation}
@@ -21,7 +21,7 @@ const Prizes = ({ scrollAnimation }) => {
             position: "relative",
             zIndex: 2,
           }}
-          className="text-4xl font-bold"
+          className="text-4xl font-bold text-black"
           dir="rtl"
         >
           الجوائز
@@ -31,7 +31,7 @@ const Prizes = ({ scrollAnimation }) => {
           className="bg-orange-500"
           style={{
             height: "8px",
-            width: "180px",
+            width: "105px",
             margin: "auto",
             marginTop: "-10px",
           }}
@@ -39,11 +39,15 @@ const Prizes = ({ scrollAnimation }) => {
       </ScrollAnimationWrapper>
       <ScrollAnimationWrapper className="w-full flex flex-col py-12">
         <motion.div variants={scrollAnimation}>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            dir="rtl" // Apply RTL direction to the grid
+          >
             {prizes.map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center bg-neutral text-neutral-content rounded-lg p-4 shadow-lg"
+                className="flex flex-col items-center bg-gray-100 text-black rounded-lg p-4 shadow-lg text-center"
+                dir="rtl" // Ensure text alignment respects RTL
               >
                 <h4 className="text-3xl font-bold mb-2" dir="rtl">
                   {item.title}
