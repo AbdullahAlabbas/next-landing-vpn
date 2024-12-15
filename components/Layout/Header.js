@@ -18,7 +18,7 @@ const Header = () => {
       <header
         className={
           "fixed top-0 w-full z-30 bg-white-500 transition-all " +
-          (scrollActive ? " shadow-md pt-0" : " pt-4")
+          (scrollActive ? "shadow-md pt-0" : "pt-4")
         }
         dir="rtl"
       >
@@ -37,7 +37,7 @@ const Header = () => {
               className={
                 "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
                 (activeLink === "about"
-                  ? " text-orange-500 animation-active "
+                  ? " text-orange-500 animation-active"
                   : " text-black-500 hover:text-orange-500")
               }
             >
@@ -53,8 +53,8 @@ const Header = () => {
               className={
                 "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
                 (activeLink === "feature"
-                  ? " text-orange-500 animation-active "
-                  : " text-black-500 hover:text-orange-500 ")
+                  ? " text-orange-500 animation-active"
+                  : " text-black-500 hover:text-orange-500")
               }
             >
               المسارات
@@ -69,8 +69,8 @@ const Header = () => {
               className={
                 "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
                 (activeLink === "pricing"
-                  ? " text-orange-500 animation-active "
-                  : " text-black-500 hover:text-orange-500 ")
+                  ? " text-orange-500 animation-active"
+                  : " text-black-500 hover:text-orange-500")
               }
             >
               الأهداف
@@ -85,15 +85,17 @@ const Header = () => {
               className={
                 "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
                 (activeLink === "testimoni"
-                  ? " text-orange-500 animation-active "
-                  : " text-black-500 hover:text-orange-500 ")
+                  ? " text-orange-500 animation-active"
+                  : " text-black-500 hover:text-orange-500")
               }
             >
               الجوائز
             </LinkScroll>
           </ul>
           <div className="col-start-10 col-end-12 font-medium flex justify-end items-center">
-            <ButtonOutline> سجل الآن</ButtonOutline>
+
+                <ButtonOutline>سجل الآن</ButtonOutline>
+
           </div>
         </nav>
       </header>
@@ -104,7 +106,7 @@ const Header = () => {
       >
         <div className="bg-white-500 sm:px-3">
           <ul className="flex w-full justify-between items-center text-black-500">
-            <LinkScroll
+          <LinkScroll
               activeClass="active"
               to="about"
               spy={true}
@@ -118,22 +120,22 @@ const Header = () => {
                   : " border-transparent")
               }
             >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
-                  d="M3 9l9-7 9 7M4 10v10a1 1 0 001 1h3m10-11v10a1 1 0 01-1 1h-3m-7 0h6" 
-                />
-              </svg>
-              الرئيسية
-            </LinkScroll>
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={2} 
+                    d="M3 9l9-7 9 7M4 10v10a1 1 0 001 1h3m10-11v10a1 1 0 01-1 1h-3m-7 0h6" 
+                  />
+                </svg>
+                الرئيسية
+              </LinkScroll>
             <LinkScroll
               activeClass="active"
               to="feature"
@@ -148,22 +150,22 @@ const Header = () => {
                   : " border-transparent ")
               }
             >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
-                  d="M9 20l-5.447-2.724A2 2 0 013 15.276V5.5a2 2 0 011.553-1.947L9 1l6 3 5.447-2.724A2 2 0 0123 5.5v9.776a2 2 0 01-1.553 1.947L15 20l-6-3-5.447 2.724A2 2 0 013 15.276V5.5" 
-                />
-              </svg>
-              المسارات
-            </LinkScroll>
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={2} 
+                    d="M9 20l-5.447-2.724A2 2 0 013 15.276V5.5a2 2 0 011.553-1.947L9 1l6 3 5.447-2.724A2 2 0 0123 5.5v9.776a2 2 0 01-1.553 1.947L15 20l-6-3-5.447 2.724A2 2 0 013 15.276V5.5" 
+                  />
+                </svg>
+                المسارات
+                </LinkScroll>
             <LinkScroll
               activeClass="active"
               to="pricing"
@@ -178,22 +180,22 @@ const Header = () => {
                   : " border-transparent ")
               }
             >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path 
-                  strokeLinecap="round"
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
-                  d="M3 4a1 1 0 011-1h3.178a2 2 0 001.697.957l5.788-.002a2 2 0 001.705 1.045H21a1 1 0 01.993.883L22 6v14a1 1 0 01-1 1H4a1 1 0 01-.993-.883L3 20V4z" 
-                />
-              </svg>
-              الأهداف
-            </LinkScroll>
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path 
+                    strokeLinecap="round"
+                    strokeLinejoin="round" 
+                    strokeWidth={2} 
+                    d="M3 4a1 1 0 011-1h3.178a2 2 0 001.697.957l5.788-.002a2 2 0 001.705 1.045H21a1 1 0 01.993.883L22 6v14a1 1 0 01-1 1H4a1 1 0 01-.993-.883L3 20V4z" 
+                  />
+                </svg>
+                الأهداف
+              </LinkScroll>
             <LinkScroll
               activeClass="active"
               to="testimoni"
@@ -208,26 +210,25 @@ const Header = () => {
                   : " border-transparent ")
               }
             >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
-                  d="M8 21h8a1 1 0 001-1v-1a5.978 5.978 0 00-2.337-4.747A5.978 5.978 0 0012 13a5.978 5.978 0 00-2.337 1.253A5.978 5.978 0 007 19v1a1 1 0 001 1zm-4 0h1a2 2 0 002-2v-1a2 2 0 00-.164-.78A2 2 0 004 14.35V12a6 6 0 0112 0v2.35a2 2 0 00-.836 1.87v1a2 2 0 002 2h1M5 12a7 7 0 0114 0" 
-                />
-              </svg>
-              الجوائز
-            </LinkScroll>
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={2} 
+                    d="M8 21h8a1 1 0 001-1v-1a5.978 5.978 0 00-2.337-4.747A5.978 5.978 0 0012 13a5.978 5.978 0 00-2.337 1.253A5.978 5.978 0 007 19v1a1 1 0 001 1zm-4 0h1a2 2 0 002-2v-1a2 2 0 00-.164-.78A2 2 0 004 14.35V12a6 6 0 0112 0v2.35a2 2 0 00-.836 1.87v1a2 2 0 002 2h1M5 12a7 7 0 0114 0" 
+                  />
+                </svg>
+                الجوائز
+                </LinkScroll>
           </ul>
         </div>
       </nav>
-      {/* End Mobile Navigation */}
     </>
   );
 };
