@@ -38,6 +38,8 @@ const Masar = ({
     },
   ],
 }) => {
+  const [sliderRef, setSliderRef] = useState(null);
+
   const settings = {
     dots: true,
     customPaging: function (i) {
@@ -71,8 +73,6 @@ const Masar = ({
     ],
   };
 
-  const [sliderRef, setSliderRef] = useState(null);
-
   return (
     <>
       <Slider
@@ -83,10 +83,8 @@ const Masar = ({
       >
         {listmasar.map((item, index) => (
           <div className="px-3 flex items-stretch" key={index}>
-            <div
-              className="border-2 border-gray-500 hover:border-orange-500 transition-all rounded-lg p-8 flex flex-col"
-              style={{ width: "350px", height: "270px" }} // Fixed dimensions
-            >
+            {/* Card Container */}
+            <div className="border-2 border-gray-500 hover:border-orange-500 transition-all rounded-lg p-8 flex flex-col w-full md:max-w-[350px] md:h-[270px]">
               <div className="flex flex-col w-full items-center">
                 <Image
                   src={item.image}
@@ -106,6 +104,8 @@ const Masar = ({
           </div>
         ))}
       </Slider>
+
+      {/* Custom Arrows */}
       <div className="flex w-full items-center justify-end">
         <div className="flex flex-none justify-between w-auto mt-14">
           <div

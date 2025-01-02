@@ -125,6 +125,7 @@ const Pricing = () => {
                 }}
                 className="text-4xl font-bold text-black-600"
                 dir="rtl"
+                id="testimoni"
               >
                 الأجندة
               </h4>

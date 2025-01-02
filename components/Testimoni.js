@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import Slider from "react-slick";
 import ArrowBack from "../public/assets/Icon/eva_arrow-back-fill.svg";
 import ArrowNext from "../public/assets/Icon/eva_arrow-next-fill.svg";
@@ -38,12 +37,14 @@ const Testimoni = ({
     },
   ],
 }) => {
+  const [sliderRef, setSliderRef] = useState(null);
+
   const settings = {
     dots: true,
     customPaging: function (i) {
       return (
-        <a className="">
-          <span className="mx-2 rounded-l-full rounded-r-full h-4 w-4 block cursor-pointer transition-all "></span>
+        <a>
+          <span className="mx-2 rounded-full h-4 w-4 block cursor-pointer transition-all"></span>
         </a>
       );
     },
@@ -70,7 +71,6 @@ const Testimoni = ({
       },
     ],
   };
-  const [sliderRef, setSliderRef] = useState(null);
 
   return (
     <>
@@ -80,33 +80,33 @@ const Testimoni = ({
         ref={setSliderRef}
         className="flex items-stretch justify-items-stretch"
       >
-{listTestimoni.map((listTestimonis, index) => (
-  <div className="px-3 flex items-stretch" key={index}>
-    <div
-      dir="rtl"
-      style={{ width: '350px', height: '250px' }} // Fixed width and height set here
-      className="border-2 border-gray-500 hover:border-orange-500 transition-all rounded-lg p-8 flex flex-col"
-    >
-      <div className="flex flex-col w-full">
-        <p className="text-[18px] text-black-600 text-right font-bold">
-          {listTestimonis.name}
-        </p>
-      </div>
-      <p className="mt-5 text-right text-[16px] text-white-500">
-        {listTestimonis.testimoni}.
-      </p>
-    </div>
-  </div>
-))}
-
+        {listTestimoni.map((item, index) => (
+          <div className="px-3 flex items-stretch" key={index}>
+            <div
+              dir="rtl"
+              className="border-2 border-gray-500 hover:border-orange-500 transition-all rounded-lg p-8 flex flex-col w-full md:max-w-[350px] md:h-[250px]"
+            >
+              <div className="flex flex-col w-full">
+                <p className="text-[18px] text-black-600 text-right font-bold">
+                  {item.name}
+                </p>
+              </div>
+              <p className="mt-5 text-right text-[16px] text-white-500">
+                {item.testimoni}.
+              </p>
+            </div>
+          </div>
+        ))}
       </Slider>
+
+      {/* Custom arrows */}
       <div className="flex w-full items-center justify-end">
         <div className="flex flex-none justify-between w-auto mt-14">
           <div
             className="mx-4 flex items-center justify-center h-14 w-14 rounded-full bg-white border-orange-500 border hover:bg-orange-500 hover:text-white-500 transition-all text-orange-500 cursor-pointer"
             onClick={sliderRef?.slickPrev}
           >
-            <ArrowBack className="h-6 w-6 " />
+            <ArrowBack className="h-6 w-6" />
           </div>
           <div
             className="flex items-center justify-center h-14 w-14 rounded-full bg-white border-orange-500 border hover:bg-orange-500 hover:text-white-500 transition-all text-orange-500 cursor-pointer"
