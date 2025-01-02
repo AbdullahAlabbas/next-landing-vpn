@@ -21,14 +21,14 @@ const Prizes = ({ scrollAnimation }) => {
             position: "relative",
             zIndex: 2,
           }}
-          className="text-4xl font-bold text-black"
+          className="text-4xl font-bold text-black-600"
           dir="rtl"
         >
           الجوائز
         </motion.h3>
         <motion.div
           variants={scrollAnimation}
-          className="bg-orange-500"
+          className=""
           style={{
             height: "8px",
             width: "105px",

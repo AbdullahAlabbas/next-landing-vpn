@@ -9,7 +9,7 @@
 
     return (
       <div
-      className="bg-gradient-to-b from-white-300 to-white-500 w-full"
+      className="w-full"
         id="feature"
       >
               <CountdownTimer

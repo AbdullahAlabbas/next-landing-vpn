@@ -92,7 +92,7 @@ const Testimoni = ({
           {listTestimonis.name}
         </p>
       </div>
-      <p className="mt-5 text-right text-[16px]">
+      <p className="mt-5 text-right text-[16px] text-white-500">
         {listTestimonis.testimoni}.
       </p>
     </div>

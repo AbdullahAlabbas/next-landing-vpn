@@ -32,7 +32,7 @@ const Timeline = () => {
     left: '0',
     height: '2px',
     width: '100%',
-    backgroundColor: '#F53855',
+    backgroundColor: '#722871',
     zIndex: 1
   };
 
@@ -86,10 +86,10 @@ const Timeline = () => {
                 textAlign: 'center'
               }}
             >
-              <p style={{ margin: '0', fontWeight: 'bold', fontSize: '1rem' }}>
+              <p style={{ margin: '0', fontWeight: 'bold', fontSize: '1rem', color: '#0B132A' }}>
                 {event.title}
               </p>
-              <p style={{ margin: '0', marginTop: '5px', fontSize: '0.9rem', color: '#AFB5C0' }}>
+              <p style={{ margin: '0', marginTop: '5px', fontSize: '0.9rem', color: '#4F5665' }}>
                 {event.date}
               </p>
             </div>

@@ -24,7 +24,7 @@ const Header = () => {
       >
         <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-3 sm:py-4">
           <div className="col-start-1 col-end-2 flex items-center">
-            <img src="/assets/Logo.png" alt="الشعار" className="h-10 w-auto" />
+          <img src="/assets/Logo.png" alt="الشعار" className="h-12 w-auto scale-150" style={{ transform: 'scale(1.50)' }} />
           </div>
           <ul className="hidden lg:flex col-start-4 col-end-8 text-black-500 items-center">
             <LinkScroll
@@ -91,11 +91,13 @@ const Header = () => {
             >
               الجوائز
             </LinkScroll>
-          </ul>
-          <div className="col-start-10 col-end-12 font-medium flex justify-end items-center">
+          </ul>          <div className="col-start-10 col-end-12 font-medium flex justify-end items-center">
 
-                <ButtonOutline>سجل الآن</ButtonOutline>
-
+                <Link href="/register" passHref>
+            <a>
+            <ButtonOutline>سجل الآن</ButtonOutline>
+            </a>
+          </Link>
           </div>
         </nav>
       </header>

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import ButtonPrimary from '../components/misc/ButtonPrimary';  // Ensure the path is correct
+import Header from "/Users/abdullah/Documents/GitHub/next-landing-vpn/components/Layout/Header";
+
 
 const TypeformEmbed = () => {
   const [showButton, setShowButton] = useState(false);  // State to manage button visibility
@@ -24,6 +26,7 @@ const TypeformEmbed = () => {
 
   return (
     <div>
+            <Header />
       <div data-tf-live="01JF0CSJ0SP46VSQ6WW19ZGEY7"></div>
       <div style={{ marginTop: 20, textAlign: 'center' }}>
         {showButton && (

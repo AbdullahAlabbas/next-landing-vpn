@@ -22,7 +22,7 @@ const Hero = () => {
             >
               <strong>صناعة ثون INDUSTRIALTHON</strong>
             </h1>
-            <p className="text-black-500 mt-4 mb-6" dir="rtl">
+            <p className="text-white-500 mt-4 mb-6" dir="rtl">
               مسابقة تهدف إلى تعزيز التواصل بين المبدعين من جميع أنحاء
               المملكة وتطوير قدراتهم التقنية لتلبية احتياجات الصناعة برعاية
               فخرية من شركة أرامكو السعودية. تمثل "صناعة ثون" فرصة فريدة
@@ -59,11 +59,11 @@ const Hero = () => {
           {/* Sponsor */}
           <div className="text-right">
             <div className="mb-4 relative inline-block">
-              <h3 className="text-2xl font-bold relative z-10">
+              <h3 className="text-2xl font-bold relative z-10 text-black-600">
                 الراعي الرسمي
               </h3>
               <div
-                className="absolute w-full bg-orange-500 z-0"
+                className="absolute w-full  z-0"
                 style={{
                   height: "9px",
                   bottom: "0",
@@ -83,11 +83,11 @@ const Hero = () => {
           {/* Organizer */}
           <div className="text-right">
             <div className="mb-4 relative inline-block">
-              <h3 className="text-2xl font-bold relative z-10">
+              <h3 className="text-2xl font-bold relative z-10 text-black-600">
                 الجهة المنظمة
               </h3>
               <div
-                className="absolute w-full bg-orange-500 z-0"
+                className="absolute w-full  z-0"
                 style={{
                   height: "9px",
                   bottom: "0",
@@ -110,11 +110,11 @@ const Hero = () => {
       <ScrollAnimationWrapper>
         <motion.div className="flex flex-col w-full my-12" variants={scrollAnimation}>
           <div className="mb-4 relative inline-block text-right" dir="rtl">
-            <h3 className="text-2xl font-bold relative z-10 inline-block">
+            <h3 className="text-2xl font-bold relative z-10 inline-block text-black-600">
               شركـاء النجاح
             </h3>
             <div
-              className="absolute w-36 bg-orange-500 z-0"
+              className="absolute w-36  z-0"
               style={{
                 height: "9px",
                 bottom: "0",

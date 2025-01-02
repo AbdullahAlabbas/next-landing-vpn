@@ -25,14 +25,14 @@ const Pricing = () => {
                 position: "relative",
                 zIndex: 2,
               }}
-              className="text-4xl font-bold"
+              className="text-4xl font-bold text-black-600"
               dir="rtl"
             >
               مسارات المسابقة
             </motion.h3>
             <motion.div
               variants={scrollAnimation}
-              className="bg-orange-500"
+              className=""
               style={{
                 height: "8px",
                 width: "260px",
@@ -56,14 +56,14 @@ const Pricing = () => {
                 position: "relative",
                 zIndex: 2,
               }}
-              className="text-4xl font-bold"
+              className="text-4xl font-bold text-black-600"
               dir="rtl"
             >
               أهداف صناعة ثون
             </motion.h3>
             <motion.div
               variants={scrollAnimation}
-              className="bg-orange-500"
+              className=""
               style={{
                 height: "8px",
                 width: "268px",
@@ -89,13 +89,13 @@ const Pricing = () => {
                   position: "relative",
                   zIndex: 2,
                 }}
-                className="text-4xl font-bold"
+                className="text-4xl font-bold text-black-600"
                 dir="rtl"
               >
                 رحلة صناعة ثون
               </h4>
               <div
-                className="absolute bg-orange-500 z-0"
+                className="absolute z-0"
                 style={{
                   width: "230px",
                   height: "9px",
@@ -123,13 +123,13 @@ const Pricing = () => {
                   position: "relative",
                   zIndex: 2,
                 }}
-                className="text-4xl font-bold"
+                className="text-4xl font-bold text-black-600"
                 dir="rtl"
               >
                 الأجندة
               </h4>
               <div
-                className="absolute bg-orange-500 z-0"
+                className="absolute z-0"
                 style={{
                   width: "110px",
                   height: "9px",
@@ -153,13 +153,13 @@ const Pricing = () => {
                   position: "relative",
                   zIndex: 2,
                 }}
-                className="text-4xl font-bold"
+                className="text-4xl font-bold text-black-600"
                 dir="rtl"
               >
                 موقع الحفل
               </h4>
               <div
-                className="absolute bg-orange-500 z-0"
+                className="absolute z-0"
                 style={{
                   width: "185px",
                   height: "9px",

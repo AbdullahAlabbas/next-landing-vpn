@@ -6,7 +6,7 @@ import getScrollAnimation from "../utils/getScrollAnimation";
 // Individual agenda item component
 const AgendaItem = ({ time }) => {
   return (
-    <div className="bg-gray-50 rounded-lg shadow p-4 mb-2">
+    <div className="bg-white-500 rounded-lg shadow p-4 mb-2">
       <div className="flex justify-between items-center">
         <div>
           <span className="font-bold text-lg" style={{ fontWeight: 'bold', fontSize: '20px' }}>{time.range}</span>
@@ -73,7 +73,7 @@ const AgendaComponent = () => {
       {days.map((day, index) => (
         <ScrollAnimationWrapper key={index}>
           <motion.div variants={scrollAnimation}>
-            <div className="mb-4">  {/* Padding added here */}
+            <div className="mb-4">  
               <button
                 onClick={() => toggleDropdown(index)}
                 className="w-full text-left bg-gray-100 hover:bg-orange-100 rounded-md py-2 px-4 flex justify-between items-center"

@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-white-300 pt-72 pb-4">
+    <div className="pt-72 pb-4">
       <div className="max-w-screen-xl w-full mx-auto px-6 sm:px-8 lg:px-16 grid grid-rows-6 sm:grid-rows-1 grid-flow-row sm:grid-flow-col grid-cols-3 sm:grid-cols-12 gap-4">
         <div className="row-span-2 sm:col-span-2 sm:col-start-1 sm:col-end-3 flex flex-col">
           <p className="text-black-600 mb-0 font-medium text-lg" style={{ direction: 'rtl' }}>المنتج</p>
@@ -26,12 +26,12 @@ const Footer = () => {
           </ul>
         </div>
         <div className="row-span-2 sm:col-span-4 col-start-1 col-end-4 sm:col-start-9 sm:col-end-13 flex flex-col items-end">
-          <img src="/assets/Logo.png" alt="Logo" className="h-11 w-auto mb-0" /> {/* Directly using <img> */}
+          <img src="/assets/Logo2.png" alt="Logo" className="h-11 w-auto mb-0" /> {/* Directly using <img> */}
           <p className="mb-0" style={{ direction: 'rtl' }}>
           مسابقة تهدف إلى تعزيز التواصل بين المبدعين من جميع أنحاء
               المملكة وتطوير قدراتهم التقنية
           </p>
-          <p className="text-gray-400" style={{ direction: 'rtl' }}>جميع الحقوق محفوظة ©</p>
+          {/* <p  style={{ direction: 'rtl' }}>© جميع الحقوق محفوظة </p> */}
         </div>
       </div>
     </div>

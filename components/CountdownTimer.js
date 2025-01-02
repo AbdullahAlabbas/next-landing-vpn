@@ -50,10 +50,10 @@ const CountdownTimer = ({ targetDate, scrollAnimation }) => {
     <ScrollAnimationWrapper>
       <motion.div variants={scrollAnimation} className="text-center mt-16">
         <div className="relative mb-4 inline-block">
-          <h2 style={{ paddingTop: "20px", position: 'relative', zIndex: 2 }} className="text-4xl font-bold" dir="rtl">
+          <h2 style={{ paddingTop: "20px", position: 'relative', zIndex: 2 }} className="text-4xl font-bold text-black-600" dir="rtl">
             بداية الهاكاثون
           </h2>
-          <div className="absolute w-full bg-orange-500 z-1" style={{ height: '12px', bottom: '0', left: '0' }}></div>
+          <div className="absolute w-full z-1" style={{ height: '12px', bottom: '0', left: '0' }}></div>
         </div>
         <div className="grid grid-flow-col gap-5 text-center auto-cols-max justify-center">
           <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">

@@ -14,8 +14,8 @@ module.exports = {
       lg: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
       xl: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
       t: "0 -1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
-      orange: "0px 20px 20px -15px rgba(245,56,56,0.81) ",
-      "orange-md": "0px 20px 40px -15px rgba(245,56,56,0.81) ",
+      orange: "0px 20px 20px -15px rgba(245,56,56,0.81)",
+      "orange-md": "0px 20px 40px -15px rgba(245,56,56,0.81)",
       none: "none",
     },
     colors: {
@@ -26,7 +26,7 @@ module.exports = {
       },
       orange: {
         100: "#FFECEC",
-        500: "#F53855",
+        500: "#722871",
       },
       green: {
         500: "#2FAB73",
@@ -42,7 +42,11 @@ module.exports = {
       },
       'industrial-green': '#51C679',
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'gradient-to-tr': 'linear-gradient(135deg, #963894, #ff9601)',
+      }
+    },
   },
   variants: {
     extend: {
@@ -50,9 +54,10 @@ module.exports = {
     },
   },
   plugins: [
-    require('daisyui'), 
+    require('daisyui'),
   ],
   daisyui: {
     darkTheme: "light",
-   },
+  },
 };
+

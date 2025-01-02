@@ -99,7 +99,7 @@ const Masar = ({
                   {item.name}
                 </p>
               </div>
-              <p className="mt-5 text-right text-sm leading-relaxed">
+              <p className="mt-5 text-right text-sm leading-relaxed text-white-500">
                 {item.masar}
               </p>
             </div>
