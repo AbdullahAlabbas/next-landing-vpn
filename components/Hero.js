@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 
-
 const Hero = () => {
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
 
@@ -12,10 +11,12 @@ const Hero = () => {
     <div className="max-w-screen-xl mt-24 px-8 xl:px-16 mx-auto" id="about">
       <ScrollAnimationWrapper>
         <motion.div
-          className="grid grid-flow-row sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 py-6 sm:py-16"
+          // Updated classes: no more grid-rows-2 or md:grid-rows-1
+          className="grid grid-flow-row sm:grid-flow-col sm:grid-cols-2 gap-8 py-6 sm:py-16"
           variants={scrollAnimation}
         >
-          <div className="flex flex-col justify-center items-start row-start-2 sm:row-start-1">
+          {/* Text Section */}
+          <div className="flex flex-col justify-center items-start">
             <h1
               className="text-3xl lg:text-4xl xl:text-5xl font-medium text-black-600 leading-normal"
               dir="rtl"
@@ -35,6 +36,8 @@ const Hero = () => {
               الابتكارات الوطنية في بيئة مشجعة.
             </p>
           </div>
+
+          {/* Image Section (hidden on mobile) */}
           <div className="flex w-full">
             <motion.div className="h-full w-full" variants={scrollAnimation}>
               <Image
@@ -114,7 +117,7 @@ const Hero = () => {
               شركـاء النجاح
             </h3>
             <div
-              className="absolute w-36  z-0"
+              className="absolute w-36 z-0"
               style={{
                 height: "9px",
                 bottom: "0",
